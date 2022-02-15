@@ -22,7 +22,7 @@ class Stack:
     def pop(self):
         """get an element from the stack"""
         if self.is_empty():
-            raise Exception("stack overflow")
+            raise Exception("stack underflow")
         else:
             self.top -= 1
             return self.elements[self.top+1]

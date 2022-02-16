@@ -1,5 +1,6 @@
 import sys
 
+
 class Stack:
     """Stack data structure implementation"""
     
@@ -8,11 +9,11 @@ class Stack:
         self.elements = [None] * size
         self.top = -1
     
-    def is_empty(self) -> None:
+    def is_empty(self) -> bool:
         """check if stack is empty"""
         return self.top == -1
     
-    def push(self, value:int) -> None:
+    def push(self, value: int) -> None:
         """insert an element with given value to the stack"""
         if self.top == len(self.elements) - 1:
             raise Exception("stack overflow")

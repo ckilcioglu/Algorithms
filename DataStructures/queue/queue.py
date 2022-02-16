@@ -1,5 +1,6 @@
 import sys
 
+
 class Queue:
     """Queue data structure implementation"""
     

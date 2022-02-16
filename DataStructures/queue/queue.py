@@ -37,7 +37,8 @@ class Queue:
             ret_val = self.elements[self.head]
             if self.head == len(self.elements) - 1:
                 self.head = 0
-            self.head += 1
+            else:
+                self.head += 1
             return ret_val
     
     def __str__(self):

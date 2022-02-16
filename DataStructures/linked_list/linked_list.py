@@ -92,7 +92,8 @@ class LinkedList:
         while node:
             data.append(node.data)
             node = node.next
-        return "->".join(data)
+        data.append('None')
+        return "->".join(map(str, data))
 
     def __str__(self):
         node = self.head
@@ -101,7 +102,7 @@ class LinkedList:
             data.append(node.data)
             node = node.next
         data.append('None')
-        return "->".join(data)
+        return "->".join(map(str, data))
 
 
 if __name__ == "__main__":
@@ -115,6 +116,9 @@ if __name__ == "__main__":
     llist.add_first(first_node)
     llist.add_last(second_node)
     llist.add_last(third_node)
+    print(llist)
+
+    llist = LinkedList(nodes=[1, 2, 3, 4])
     print(llist)
 
 

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 
 void print_the_array(int *a, int a_length)
@@ -45,8 +46,9 @@ int main(int argc, char *argv[])
         printf("Length of list should be a positive number\n");
         return 1;
     }
+    
     int *a = malloc(a_size * sizeof(int));
-
+    srand(time(NULL));
     for (int i = 0; i < a_size; i++)
     {
         int num = (rand() % 1000) + 1;
